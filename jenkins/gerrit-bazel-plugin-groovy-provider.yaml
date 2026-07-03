@@ -5,15 +5,14 @@
     jobs:
       - 'plugin-{name}-verifier-gh'
       - 'plugin-{name}-gh-bazel-{branch}':
-          extra-gh-repos: 'gerrit-bsl-license'
           branch:
-            - master
             - stable-3.13
       - 'plugin-{name}-gh-bazel-{branch}-{gerrit-branch}':
           extra-gh-repos: 'gerrit-bsl-license'
           branch:
             - master
           gerrit-branch:
+            - master
             - stable-3.14
       - 'plugin-scripting-{name}-bazel-{branch}-{gerrit-branch}':
           branch:
