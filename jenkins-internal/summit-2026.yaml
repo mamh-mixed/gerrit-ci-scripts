@@ -1,0 +1,14 @@
+- job:
+    name: summit-2026
+    project-type: pipeline
+    disabled: true
+    pipeline-scm:
+      scm:
+        - git:
+            credentials-id: gerrit.googlesource.com
+            url: https://gerrit.googlesource.com/a/summit/2026
+            branches:
+              - master
+    triggers:
+      - pollscm:
+          cron: "H/20 * * * *"
